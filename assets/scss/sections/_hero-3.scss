@@ -1,0 +1,139 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Hero 3 Section
+--------------------------------------------------------------*/
+.hero-3 {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+
+  .hero-slider {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+
+    .swiper-wrapper {
+      height: auto !important;
+    }
+
+    .swiper-slide {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      min-height: 600px;
+    }
+
+    .slide-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%);
+      }
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      padding: 0 40px;
+
+      .slide-label {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--contrast-color);
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid color-mix(in srgb, var(--contrast-color), transparent 70%);
+      }
+
+      h1 {
+        font-size: 64px;
+        font-weight: 300;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--contrast-color);
+        margin-bottom: 24px;
+        line-height: 1.1;
+
+        @media (max-width: 768px) {
+          font-size: 42px;
+        }
+
+        @media (max-width: 576px) {
+          font-size: 32px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.8;
+        color: color-mix(in srgb, var(--contrast-color), transparent 15%);
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (max-width: 576px) {
+          font-size: 16px;
+        }
+      }
+
+      .btn-shop {
+        display: inline-block;
+        padding: 16px 48px;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--contrast-color);
+        background: transparent;
+        border: 1px solid var(--contrast-color);
+        transition: all 0.5s ease;
+
+        &:hover {
+          background: var(--contrast-color);
+          color: var(--default-color);
+        }
+      }
+    }
+
+    .swiper-pagination {
+      bottom: 40px;
+
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: transparent;
+        border: 1px solid var(--contrast-color);
+        opacity: 0.6;
+        margin: 0 8px;
+        transition: all 0.4s ease;
+
+        &.swiper-pagination-bullet-active {
+          opacity: 1;
+          background: var(--contrast-color);
+        }
+      }
+    }
+  }
+}
